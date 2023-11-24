@@ -1,6 +1,8 @@
 ﻿@{
     ViewData["Title"] = "Privacy Policy";
+    var username = ViewBag.asd;
 }
 <h1>@ViewData["Title"]</h1>
 
 <p>Use this page to detail your site's privacy policy.</p>
+<h4>Username :  <b class="@(username != null ? "text-primary" : "")">@(username ?? "Null Or Empty")</b></h4>

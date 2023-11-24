@@ -1,0 +1,10 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+    var username = ViewBag.az; 
+}
+
+<div class="text-center">
+    <h1 class="display-4">User</h1>
+</div>
+
+<h4>Username :  <b class="@(username != null ? "text-primary" : "")">@(username ?? "Null Or Empty")</b></h4>

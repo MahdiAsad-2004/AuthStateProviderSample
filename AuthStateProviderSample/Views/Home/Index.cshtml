@@ -1,8 +1,27 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
+    var username = User.Identity.Name; 
+    var isAdmin = User.IsInRole("Admin"); 
 }
 
 <div class="text-center">
     <h1 class="display-4">Welcome</h1>
+    <h3 class="display-6">@ViewBag.Username</h3>
     <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
 </div>
+
+<h4>Username :  <b class="@(username != null ? "text-primary" : "")">@(username ?? "Null Or Empty")</b></h4>
+<h4>Is In Role Admin :  <b class="@(isAdmin ? "text-primary" : "")">@isAdmin</b></h4>
+
+<button class="btn btn-outline-dark" onclick="ShowUser(name = @(User.Identity.Name ?? "Null Or Empty"))">Current User</button>
+<a class="btn btn-outline-info" href="https://localhost:7120/MyMiddleware">Go MyMiddleware</a>
+
+
+
+@section Scripts{
+    <script>
+        function ShowUser(name){
+            alert(name);
+        }
+    </script>
+}
