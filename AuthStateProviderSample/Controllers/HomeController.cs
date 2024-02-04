@@ -29,10 +29,8 @@ namespace AuthStateProviderSample.Controllers
 
         public IActionResult Privacy()
         {
-            _stateService.Username = "UsernameInPrivacy";
+            //_stateService.Username = "UsernameInPrivacy";
             ViewBag.asd = _stateService.Username;
-
-            _logger.LogTrace("sf654sdf654sd65f6sdf");
 
             return View();
         }

@@ -26,7 +26,7 @@ namespace AuthStateProviderSample.Controllers
 
         public async Task<IActionResult> Index()
         {
-            _stateService.Username = "UsernameIn(UserController)";
+            //_stateService.Username = "UsernameIn(UserController)";
             ViewBag.az = _stateService.Username;
 
             await _sampleService.CreateEntity("Course");

@@ -16,18 +16,7 @@
         public async Task CreateEntity(string entityname)
         {
             //business
-
-            Console.WriteLine($"Entity '{entityname}' Create By '{_stateService.Username}' .");
-            _logger.LogTrace($"Entity {entityname} Create By '{_stateService.Username}'");
-            _logger.LogInformation($"Entity {entityname} Create By '{_stateService.Username}'");
-            _logger.LogCritical($"Entity {entityname} Create By '{_stateService.Username}'");
-            _logger.LogDebug($"Entity {entityname} Create By '{_stateService.Username}'");
-            _logger.LogError($"Entity {entityname} Create By '{_stateService.Username}'");
             _logger.LogWarning($"Entity {entityname} Create By '{_stateService.Username}'");
-            await Console.Out.WriteLineAsync("Logger Type : " + _logger.GetType());
-            _logger.Log(LogLevel.Debug, "dsfdsfdfdsfdfg;kmlkm");
-
-            
         }
 
     }
